@@ -44,11 +44,11 @@ class _HomeScreenState extends State<HomeScreen> {
             alignment: Alignment.center,
             child: Column(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 const Image(image: AssetImage('images/fortunecorgi.jpg'),
                       height: 250
                     ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 // This is a little trick to force the OutlinedButton to the bottom of the screen.
                 // Expanded will take up all of the space between the image and the button.
                 Expanded(child: TextBox(text: fortune)),
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   child: const Text("Click for wisdom")
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
               ],
             ),
           )

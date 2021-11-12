@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 const SizedBox(height: 20),
-                const Image(image: AssetImage('images/fortunecorgi.jpg'),
+                const Image(image: AssetImage('images/corgi.png'),
                       height: 250
                     ),
                 const SizedBox(height: 10),

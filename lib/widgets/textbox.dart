@@ -7,7 +7,13 @@ class TextBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(text),
+      padding: const EdgeInsets.all(30),
+      child: SingleChildScrollView(
+        child: Text(
+          text,
+          style: const TextStyle(fontFamily: "Roboto"),
+        ),
+      ),
     );
   }
 }

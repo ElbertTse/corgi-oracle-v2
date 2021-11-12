@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/textbox.dart';
 import '../api/fortune.dart';
 
 // Start this as stateless
@@ -15,12 +16,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    fortune = "woof";
+    fortune = "Click the button and I'll give you some knowledge";
   }
 
   void update() async {
     String res = await getFortune();
-    print(res);
     setState(() {
       fortune = res;
     });
@@ -48,15 +48,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 const Image(image: AssetImage('images/fortunecorgi.jpg'),
                       height: 250
                     ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 // This is a little trick to force the OutlinedButton to the bottom of the screen.
                 // Expanded will take up all of the space between the image and the button.
-                Expanded(child: Text(fortune)),
+                Expanded(child: TextBox(text: fortune)),
                 OutlinedButton(
                   onPressed: () {
                     update();
                   },
-                  child: const Text("Click me")
+                  child: const Text("Click for wisdom")
                 ),
                 SizedBox(height: 20),
               ],
